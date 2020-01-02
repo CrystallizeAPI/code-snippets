@@ -1,0 +1,90 @@
+{
+  catalogue(language: "en", path: "/") {
+    ...item
+    ...product
+  }
+}
+
+fragment item on Item {
+  id
+  name
+  type
+  path
+  components {
+    name
+    type
+    meta {
+      key
+      value
+    }
+    content {
+      ...singleLineContent
+      ...richTextContent
+      ...imageContent
+      ...paragraphCollectionContent
+    }
+  }
+}
+
+fragment product on Product {
+  vatType {
+    name
+    percent
+  }
+  isVirtual
+  isSubscriptionOnly
+  variants {
+    id
+    name
+    sku
+    price
+    stock
+    isDefault
+    image {
+      ...image
+    }
+    subscriptionPlans {
+      id
+      name
+      initialPeriod
+      initialPrice
+      recurringPeriod
+      recurringPrice
+    }
+  }
+}
+
+fragment image on Image {
+  url
+  altText
+  variants {
+    url
+    width
+  }
+}
+fragment imageContent on ImageContent {
+  images {
+    ...image
+  }
+}
+fragment singleLineContent on SingleLineContent {
+  text
+}
+
+fragment richTextContent on RichTextContent {
+  json
+}
+
+fragment paragraphCollectionContent on ParagraphCollectionContent {
+  paragraphs {
+    title {
+      ...singleLineContent
+    }
+    body {
+      ...richTextContent
+    }
+    images {
+      ...image
+    }
+  }
+}
