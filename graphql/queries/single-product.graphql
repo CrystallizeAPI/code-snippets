@@ -1,0 +1,38 @@
+query {
+  catalogue(language: "en", path: "/cuddly-toys/kevin-the-kiwi") {
+    ... on Product {
+      id
+      name
+      type
+      language
+      path
+      isVirtual
+      isSubscriptionOnly
+      variants {
+        id
+        name
+        sku
+        price
+        stock
+        image {
+          url
+          altText
+          key
+          variants {
+            width
+            url
+            key
+          }
+        }
+      }
+      components {
+        name
+        type
+      }
+      vatType {
+        name
+        percent
+      }
+    }
+  }
+}
