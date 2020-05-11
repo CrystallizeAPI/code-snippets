@@ -1,0 +1,20 @@
+query HelloCrystallize {
+  catalogue(language: "en", path: "/teddy-bears") {
+    ...Item
+  }
+}
+
+fragment Item on Item {
+  id
+  name
+  type
+  path
+  children {
+    id
+    name
+    path
+  }
+  topics {
+    name
+  }
+}
