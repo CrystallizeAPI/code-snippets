@@ -1,6 +1,7 @@
 query {
   catalogue(language: "en", path: "/cuddly-toys") {
     ...item
+    ...folder
   }
 }
 fragment item on Item {
@@ -8,32 +9,23 @@ fragment item on Item {
   name
   type
   path
-  ...folder
+  components {
+    ...component
+  }
 }
 
 fragment folder on Folder {
   children {
+    ...item
     ...product
-    ...document
-  }
-}
-
-fragment document on Document {
-  id
-  components {
-    ...component
   }
 }
 
 fragment product on Product {
-  id
-  variants{
+  variants {
     stock
     price
     sku
-  }
-  components {
-    ...component
   }
 }
 
