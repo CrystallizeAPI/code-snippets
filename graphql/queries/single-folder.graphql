@@ -3,28 +3,54 @@ query {
     ...item
   }
 }
-
 fragment item on Item {
   id
   name
   type
   path
-  components {
-    name
-    type
-    meta {
-      key
-      value
-    }
-    content {
-      ...singleLine
-      ...richText
-      ...imageContent
-      ...paragraphCollection
-    }
+  ...folder
+}
+
+fragment folder on Folder {
+  children {
+    ...product
+    ...document
   }
 }
 
+fragment document on Document {
+  id
+  components {
+    ...component
+  }
+}
+
+fragment product on Product {
+  id
+  variants{
+    stock
+    price
+    sku
+  }
+  components {
+    ...component
+  }
+}
+
+fragment component on Component {
+  name
+  type
+  meta {
+    key
+    value
+  }
+  content {
+    ...singleLine
+    ...richText
+    ...imageContent
+    ...paragraphCollection
+  }
+}
 fragment image on Image {
   url
   altText
@@ -35,23 +61,19 @@ fragment image on Image {
     key
   }
 }
-
 fragment imageContent on ImageContent {
   images {
     ...image
   }
 }
-
 fragment singleLine on SingleLineContent {
   text
 }
-
 fragment richText on RichTextContent {
   json
   html
   plainText
 }
-
 fragment paragraphCollection on ParagraphCollectionContent {
   paragraphs {
     title {
