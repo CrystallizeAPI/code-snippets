@@ -1,0 +1,17 @@
+query HelloCrystallize{
+  catalogue(language: "en", path: "/teddy-bears") {
+	  id
+    name
+    type
+    path
+    children{
+      id
+      name
+      path
+    }
+    topics{
+      name
+    }
+  }
+}
+
