@@ -1,0 +1,21 @@
+customer{
+        lastName
+        middleName
+        firstName
+        identifier
+        birthDate
+        addresses{
+          type
+          firstName
+          lastName
+          city
+          state
+          country
+          postalCode
+          street
+          street2
+          streetNumber
+          phone
+          email
+        }
+      }
