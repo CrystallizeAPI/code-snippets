@@ -1,0 +1,10 @@
+{
+  provider: stripe
+  stripe: {
+    orderId: "ord_0001"
+    customerId: "cus_0001"
+    paymentMethod: "card"
+    paymentIntentId: "pi_0001"
+    metadata: null
+  }
+}
