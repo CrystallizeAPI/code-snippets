@@ -1,0 +1,11 @@
+query {
+  catalogue(path: "/shop/chairs/big-bowl-lounge-chair") {
+   ... on Product {
+      id
+      name
+      type
+      path
+      language
+    }
+  }
+}

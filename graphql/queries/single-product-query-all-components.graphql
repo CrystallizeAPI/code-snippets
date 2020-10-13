@@ -1,0 +1,34 @@
+query {
+  catalogue(path: "/shop/chairs/big-bowl-lounge-chair") {
+    ... on Product {
+      name
+      components {
+        id
+        name
+        content {
+	... on RichTextContent {
+            html  
+            plainText
+            json
+          }
+           ... on ParagraphCollectionContent {
+            paragraphs {
+              title {
+                text
+              }
+              body {
+                plainText
+                json
+                html
+              }
+              images {
+                url
+                key
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
