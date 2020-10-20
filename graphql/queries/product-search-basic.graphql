@@ -1,0 +1,29 @@
+query CatalogueSearch {
+  search(
+    filter: { searchTerm: "chair", type: PRODUCT, productVariants:{isDefault:true} }
+    orderBy: { field: PRICE, direction: ASC }
+  ) {
+    edges {
+      node {
+        name
+        id
+        path
+        ... on Product {
+          topics {
+            id
+            name
+          }
+          
+          variants {
+            images{
+              url
+            }
+            price
+            sku
+            name
+          }
+        }
+      }
+    }
+  }
+}
