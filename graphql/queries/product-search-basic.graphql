@@ -1,6 +1,11 @@
+# Write your query or mutation here
 query CatalogueSearch {
   search(
-    filter: { searchTerm: "chair", type: PRODUCT, productVariants:{isDefault:true} }
+    filter: {
+      searchTerm: "kiwi"
+      type: PRODUCT
+      productVariants: { isDefault: true }
+    }
     orderBy: { field: PRICE, direction: ASC }
   ) {
     edges {
@@ -13,11 +18,7 @@ query CatalogueSearch {
             id
             name
           }
-          
           variants {
-            images{
-              url
-            }
             price
             sku
             name
