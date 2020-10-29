@@ -1,0 +1,34 @@
+query CatalogueSearch {
+  search(
+    filter: {
+      searchTerm: "Bear"
+      type: PRODUCT
+      include: { topicNames: ["Plastics", "Teddy Bears"] }
+      productVariants: { isDefault: true }
+    }
+  ) {
+    aggregations {
+      price {
+        min
+        max
+      }
+      variantAttributes {
+        attribute
+        value
+        count
+      }
+    }
+    edges {
+      node {
+        name
+        id
+        ... on Product {
+          variants {
+            price
+            name
+          }
+        }
+      }
+    }
+  }
+}
