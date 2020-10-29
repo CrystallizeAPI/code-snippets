@@ -1,0 +1,24 @@
+query CatalogueSearch {
+  search(
+    first: 2
+    after: "MQ=="
+    filter: { type: PRODUCT, productVariants: { isDefault: true } }
+  ) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    edges {
+      node {
+        name
+        id
+        ... on Product {
+          variants {
+            price
+            name
+          }
+        }
+      }
+    }
+  }
+}
