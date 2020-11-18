@@ -1,0 +1,34 @@
+mutation UPDATE_PRODUCT{
+  product {
+    update(
+      id: "MY_PRODUCT_ID"
+      language: "en"
+      input: {
+        externalReference: "EXTERNAL_PRODUCT_REFERENCE_ID"
+        variants: [
+          {
+            name: "Green"
+            externalReference: "EXTERNAL_PRODUCT_REFERENCE_ID_GREEN"
+            price: 240
+            stock: 15
+            isDefault: true
+            images: [
+              { key: "teddy-bear-shop/20/11/17/2/teddy-bear-m-green.svg" }
+            ]
+            attributes: [{ attribute: "color", value: "green" }]
+          }
+          {
+            name: "Red"
+            externalReference: "EXTERNAL_PRODUCT_REFERENCE_ID_RED"
+            price: 240
+            stock: 10
+            images: [{ key: "teddy-bear-shop/20/11/17/2/teddy-bear-m-red.svg" }]
+            attributes: [{ attribute: "color", value: "red" }]
+          }
+        ]
+      }
+    ) {
+      id
+    }
+  }
+}
