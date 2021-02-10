@@ -2,6 +2,16 @@ query {
   catalogue(path: "/shop/chairs/big-bowl-lounge-chair") {
     ... on Product {
       name
+      defaultVariant {
+        name
+        sku
+        stock
+        priceVariants {
+          identifier
+          name
+          price
+        }
+      }
       summary: component(id: "summary") {
         id
         name
