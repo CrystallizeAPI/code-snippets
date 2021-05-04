@@ -1,0 +1,8 @@
+{
+  provider: klarna
+  klarna:{
+    orderId:"ord_0001"
+    recurringToken:"tok_0001"
+    metadata: null
+  }
+}

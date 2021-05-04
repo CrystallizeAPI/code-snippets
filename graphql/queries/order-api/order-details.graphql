@@ -1,0 +1,81 @@
+query orderDetails {
+  orders {
+    get(id: "myCrystallizeOrderId") {
+      createdAt
+      customer {
+        lastName
+        middleName
+        firstName
+        identifier
+        birthDate
+        addresses {
+          type
+          firstName
+          lastName
+          city
+          state
+          country
+          postalCode
+          street
+          street2
+          streetNumber
+          phone
+          email
+        }
+      }
+      cart {
+        name
+        sku
+        productId
+        productVariantId
+        imageUrl
+        quantity
+        subscription {
+          name
+          period
+          end
+        }
+        price {
+          discounts {
+            percent
+          }
+          currency
+          tax {
+            name
+            percent
+          }
+          net
+          gross
+        }
+      }
+      payment {
+        __typename
+        ... on StripePayment {
+          orderId
+          customerId
+          paymentMethod
+          paymentIntentId
+          subscriptionId
+          metadata
+        }
+        ... on PaypalPayment {
+          provider
+          orderId
+          subscriptionId
+          invoiceId
+          metadata
+        }
+        ... on KlarnaPayment {
+          recurringToken
+          orderId
+          metadata
+        }
+        ... on CashPayment {
+          provider
+          cash
+        }
+      }
+      additionalInformation
+    }
+  }
+}

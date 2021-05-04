@@ -1,0 +1,102 @@
+query {
+  catalogue(language: "en", path: "/cuddly-toys/kevin-the-kiwi") {
+    ...item
+    ...product
+  }
+}
+
+fragment item on Item {
+  id
+  name
+  type
+  path
+  components {
+    name
+    type
+    meta {
+      key
+      value
+    }
+    content {
+      ...singleLine
+      ...richText
+      ...imageContent
+      ...paragraphCollection
+    }
+  }
+}
+
+fragment product on Product {
+  vatType {
+    name
+    percent
+  }
+  isVirtual
+  isSubscriptionOnly
+  variants {
+    id
+    name
+    sku
+    price
+    stock
+    isDefault
+    image {
+      url
+      altText
+      key
+      variants {
+        key
+        width
+      }
+    }
+    subscriptionPlans {
+      id
+      name
+      initialPeriod
+      initialPrice
+      recurringPeriod
+      recurringPrice
+    }
+  }
+}
+
+fragment image on Image {
+  url
+  altText
+  key
+  variants {
+    url
+    width
+    key
+  }
+}
+
+fragment imageContent on ImageContent {
+  images {
+    ...image
+  }
+}
+
+fragment singleLine on SingleLineContent {
+  text
+}
+
+fragment richText on RichTextContent {
+  json
+  html
+  plainText
+}
+
+fragment paragraphCollection on ParagraphCollectionContent {
+  paragraphs {
+    title {
+      ...singleLine
+    }
+    body {
+      ...richText
+    }
+    images {
+      ...image
+    }
+  }
+}

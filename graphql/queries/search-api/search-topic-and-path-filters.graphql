@@ -1,0 +1,36 @@
+query CatalogueSearch {
+  search(
+    language: "en"
+    filter: {
+      type: PRODUCT
+      include: {
+        paths: "/teddy-bears"
+        topicNames: [
+          "Material / Plastics"
+          "Origin / Pacific / New Zealand / Auckland"
+        ]
+      }
+      productVariants: { isDefault: true }
+    }
+    orderBy: { field: PRICE, direction: ASC }
+  ) {
+    edges {
+      node {
+        name
+        id
+        path
+        ... on Product {
+          topics {
+            id
+            name
+          }
+          variants {
+            price
+            sku
+            name
+          }
+        }
+      }
+    }
+  }
+}

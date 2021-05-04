@@ -1,0 +1,10 @@
+fragment image on Image {
+  url
+  altText
+  key
+  variants {
+    url
+    width
+    key
+  }
+}

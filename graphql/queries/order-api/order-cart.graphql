@@ -1,0 +1,26 @@
+cart{
+        name
+        sku
+        productId
+        productVariantId
+        imageUrl
+        quantity
+        subscription{
+          name
+          period
+          end
+        }
+        price{
+          discounts{
+            percent
+            
+          }
+          currency
+          tax{
+            name
+            percent
+          }
+          net
+          gross
+        }
+      }

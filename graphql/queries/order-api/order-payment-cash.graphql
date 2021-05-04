@@ -1,0 +1,6 @@
+{
+  provider:cash
+  cash:{
+    cash:"300"
+  }
+}

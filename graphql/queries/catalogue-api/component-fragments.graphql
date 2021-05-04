@@ -1,0 +1,44 @@
+components {
+    name
+    type
+    meta {
+      key
+      value
+    }
+    content {
+      ...singleLine
+      ...richText
+      ...imageContent
+      ...paragraphCollection
+    }
+  }
+  
+fragment imageContent on ImageContent {
+  images {
+    ...image
+  }
+}
+
+fragment singleLine on SingleLineContent {
+  text
+}
+
+fragment richText on RichTextContent {
+  json
+  html
+  plainText
+}
+
+fragment paragraphCollection on ParagraphCollectionContent {
+  paragraphs {
+    title {
+      ...singleLine
+    }
+    body {
+      ...richText
+    }
+    images {
+      ...image
+    }
+  }
+}
