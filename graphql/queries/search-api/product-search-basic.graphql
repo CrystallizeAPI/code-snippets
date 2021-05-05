@@ -1,0 +1,31 @@
+
+# Write your query or mutation here
+query CatalogueSearch {
+  search(
+    filter: {
+      searchTerm: "kiwi"
+      type: PRODUCT
+      productVariants: { isDefault: true }
+    }
+    orderBy: { field: PRICE, direction: ASC }
+  ) {
+    edges {
+      node {
+        name
+        id
+        path
+        ... on Product {
+          topics {
+            id
+            name
+          }
+          variants {
+            price
+            sku
+            name
+          }
+        }
+      }
+    }
+  }
+}
