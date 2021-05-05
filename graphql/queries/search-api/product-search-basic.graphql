@@ -3,7 +3,7 @@
 query CatalogueSearch {
   search(
     filter: {
-      searchTerm: "kiwi"
+      searchTerm: "plant"
       type: PRODUCT
       productVariants: { isDefault: true }
     }

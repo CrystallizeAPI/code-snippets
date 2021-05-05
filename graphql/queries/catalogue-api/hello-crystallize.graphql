@@ -1,5 +1,5 @@
 query HelloCrystallize{
-  catalogue(language: "en", path: "/teddy-bears") {
+  catalogue(language: "en", path: "/shop/plants") {
 	  id
     name
     type
