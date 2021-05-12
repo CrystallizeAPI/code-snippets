@@ -1,23 +1,13 @@
 query CatalogueSearch {
-  search(
-    first: 2
-    after: "MQ=="
-    filter: { type: PRODUCT, productVariants: { isDefault: true } }
-  ) {
+  search(first: 1, after: "NDI=") {
     pageInfo {
       hasNextPage
       endCursor
+      totalNodes
     }
     edges {
       node {
         name
-        id
-        ... on Product {
-          variants {
-            price
-            name
-          }
-        }
       }
     }
   }

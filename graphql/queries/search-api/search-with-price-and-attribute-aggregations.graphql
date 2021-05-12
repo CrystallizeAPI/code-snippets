@@ -1,9 +1,9 @@
 query CatalogueSearch {
   search(
     filter: {
-      searchTerm: "Bear"
+      searchTerm: "table"
       type: PRODUCT
-      include: { topicNames: ["Plastics", "Teddy Bears"] }
+      include: { topicNames: ["Livingroom"] }
       productVariants: { isDefault: true }
     }
   ) {

@@ -1,13 +1,13 @@
-
 query CatalogueSearch {
   search(
-    filter: {
-      searchTerm: "Table"
-      type: PRODUCT
-      include: { topicNames: ["Kitchen"] }
-      productVariants: { isDefault: true }
-    }
+    first: 2
+    after: "MQ=="
+    filter: { type: PRODUCT, productVariants: { isDefault: true } }
   ) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
     edges {
       node {
         name
