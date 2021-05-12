@@ -1,0 +1,27 @@
+query {
+  catalogue(path: "/shop/chairs/big-bowl-lounge-chair", language: "en") {
+    id
+    path
+    name
+    ... on Product {
+      defaultVariant {
+        id
+        sku
+        name
+        stock
+        price
+        isDefault
+        images {
+          url
+          altText
+          variants {
+            key
+            url
+            width
+            height
+          }
+        }
+      }
+    }
+  }
+}
