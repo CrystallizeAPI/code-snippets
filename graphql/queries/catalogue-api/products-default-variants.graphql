@@ -1,0 +1,26 @@
+query {
+  catalogue(path: "/shop/chairs", language: "en") {
+    children {
+      ... on Product {
+        defaultVariant {
+          id
+          sku
+          name
+          stock
+          price
+          isDefault
+          images {
+            url
+            altText
+            variants {
+              key
+              url
+              width
+              height
+            }
+          }
+        }
+      }
+    }
+  }
+}

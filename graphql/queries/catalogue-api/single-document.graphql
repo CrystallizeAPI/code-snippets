@@ -1,5 +1,5 @@
 query {
-  catalogue(language: "en", path: "/news/new-teddy-bear-shop") {
+  catalogue(language: "en", path: "/stories/use-your-houseplants-as-decor") {
     ...item
   }
 }

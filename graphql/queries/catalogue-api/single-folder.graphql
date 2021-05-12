@@ -1,5 +1,5 @@
 query {
-  catalogue(language: "en", path: "/cuddly-toys") {
+  catalogue(language: "en", path: "/shop/chairs") {
     ...item
     ...folder
   }

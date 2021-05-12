@@ -1,0 +1,35 @@
+{
+  catalogue(path: "/shop/chairs", language: "en") {
+    children {
+      ... on Product {
+        path
+        name
+        variants {
+          id
+          sku
+          name
+          stock
+          price
+          isDefault
+          images {
+            url
+            key
+            altText
+            variants {
+              key
+              url
+              height
+              width
+            }
+          }
+          priceVariants {
+            name
+            identifier
+            price
+            currency
+          }
+        }
+      }
+    }
+  }
+}

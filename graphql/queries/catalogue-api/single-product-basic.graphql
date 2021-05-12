@@ -1,5 +1,5 @@
 query {
-  catalogue(language: "en", path: "/cuddly-toys/kevin-the-kiwi") {
+  catalogue(language: "en", path: "/shop/plants/alocasia") {
     ...item
     ...product
   }
@@ -34,14 +34,6 @@ fragment product on Product {
     price
     stock
     isDefault
-    subscriptionPlans {
-      id
-      name
-      initialPeriod
-      initialPrice
-      recurringPeriod
-      recurringPrice
-    }
   }
 }
 
