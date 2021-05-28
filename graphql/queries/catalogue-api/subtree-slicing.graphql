@@ -1,0 +1,11 @@
+query {
+  catalogue(path: "/shop/plants", language: "en") {
+    subtree(first: 3) {
+      edges {
+        node {
+          name
+        }
+      }
+    }
+  }
+}
