@@ -1,0 +1,16 @@
+query {
+  catalogue(path: "/shop/sofas/blue-velour-sofa", language: "en") {
+    topics {
+      ... on Topic {
+        name
+        items {
+          edges {
+            node {
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}

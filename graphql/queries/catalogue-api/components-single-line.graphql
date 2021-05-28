@@ -1,0 +1,13 @@
+query {
+  catalogue(path: "/stories/use-your-houseplants-as-decor", language: "en") {
+    name
+    component(id: "title") {
+      name
+      content {
+        ... on SingleLineContent {
+          text
+        }
+      }
+    }
+  }
+}

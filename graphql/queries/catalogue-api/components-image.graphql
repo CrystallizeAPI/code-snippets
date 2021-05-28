@@ -1,0 +1,19 @@
+query {
+  catalogue(path: "/stories/how-to-choose-the-right-rug", language: "en") {
+    component(id: "image") {
+      name
+      content {
+        ... on ImageContent {
+          images {
+            ... on Image {
+              url
+              variants {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

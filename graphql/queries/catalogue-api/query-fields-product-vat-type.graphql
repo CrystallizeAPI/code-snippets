@@ -2,10 +2,11 @@ query {
   catalogue(path: "/shop/sofas/arbour-eco", language: "en") {
     name
     ... on Product {
-      defaultVariant {
-        name
-        price
-        sku
+      vatType {
+        ... on VatInfo {
+          name
+          percent
+        }
       }
     }
   }

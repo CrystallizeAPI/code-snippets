@@ -1,0 +1,8 @@
+query {
+  catalogue(path: "/stories/how-to-choose-the-right-rug", language: "en") {
+    name
+    createdAt
+    updatedAt
+    publishedAt
+  }
+}

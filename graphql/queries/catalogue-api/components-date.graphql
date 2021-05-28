@@ -1,0 +1,16 @@
+query {
+  catalogue(
+    path: "/shop/plants/learn-demo-product"
+    language: "en"
+    version: draft
+  ) {
+    component(id: "date") {
+      name
+      content {
+        ... on DatetimeContent {
+          datetime
+        }
+      }
+    }
+  }
+}

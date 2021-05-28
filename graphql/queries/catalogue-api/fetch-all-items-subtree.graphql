@@ -1,0 +1,25 @@
+query {
+  catalogue(path: "/", language: "en") {
+    subtree {
+      edges {
+        node {
+          name
+          subtree {
+            edges {
+              node {
+                name
+                subtree {
+                  edges {
+                    node {
+                      name
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

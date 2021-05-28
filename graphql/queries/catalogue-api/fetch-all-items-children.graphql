@@ -1,0 +1,16 @@
+query {
+  catalogue(path: "/", language: "en") {
+    children {
+      name
+      type
+      children {
+        name
+        type
+        children {
+          name
+          type
+        }
+      }
+    }
+  }
+}

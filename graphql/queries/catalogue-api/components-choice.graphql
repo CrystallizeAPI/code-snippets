@@ -1,0 +1,19 @@
+query {
+  catalogue(path: "/vouchers/great-deal", language: "en") {
+    component(id: "discount") {
+      name
+      content {
+        ... on ComponentChoiceContent {
+          selectedComponent {
+            name
+            content {
+              ... on NumericContent {
+                number
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

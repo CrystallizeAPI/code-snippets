@@ -1,0 +1,14 @@
+query {
+  document: catalogue(path: "/shop/chairs/funky-yellow-chair", language: "en") {
+    name
+    path
+  }
+  product: catalogue(path: "/stories/color-is-back", language: "en") {
+    name
+    path
+  }
+  folder: catalogue(path: "/shop", language: "en") {
+    name
+    path
+  }
+}

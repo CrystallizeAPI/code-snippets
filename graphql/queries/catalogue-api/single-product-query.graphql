@@ -1,11 +1,8 @@
-query {
-  catalogue(path: "/shop/chairs/big-bowl-lounge-chair") {
-   ... on Product {
-      id
-      name
-      type
-      path
-      language
-    }
+query GetProduct {
+  catalogue(language: "en", path: "/shop/plants/alocasia") {
+		id
+		name
+    type
+    path
   }
 }

@@ -1,0 +1,12 @@
+query {
+  catalogue(path: "/stories/color-is-back", language: "en") {
+    component(id: "is-free") {
+      name
+      content {
+        ... on BooleanContent {
+          value
+        }
+      }
+    }
+  }
+}

@@ -1,67 +1,8 @@
-query {
-  catalogue(language: "en", path: "/stories/use-your-houseplants-as-decor") {
-    ...item
-  }
-}
-
-fragment item on Item {
-  id
-  name
-  type
-  path
-  components {
-    name
+query GetDocument {
+  catalogue(language: "en", path: "/stories/how-to-choose-the-right-rug") {
+		name
     type
-    meta {
-      key
-      value
-    }
-    content {
-      ...singleLine
-      ...richText
-      ...imageContent
-      ...paragraphCollection
-    }
-  }
-}
-
-fragment image on Image {
-  url
-  altText
-  key
-  variants {
-    url
-    width
-    key
-  }
-}
-
-fragment imageContent on ImageContent {
-  images {
-    ...image
-  }
-}
-
-fragment singleLine on SingleLineContent {
-  text
-}
-
-fragment richText on RichTextContent {
-  json
-  html
-  plainText
-}
-
-fragment paragraphCollection on ParagraphCollectionContent {
-  paragraphs {
-    title {
-      ...singleLine
-    }
-    body {
-      ...richText
-    }
-    images {
-      ...image
-    }
+    path
+    publishedAt
   }
 }

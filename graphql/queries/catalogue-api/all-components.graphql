@@ -1,0 +1,33 @@
+query {
+  catalogue(path: "/shop/plants/golden-pothos", language: "en") {
+    components {
+      name
+      content {
+        ... on RichTextContent {
+          plainText
+        }
+        ... on PropertiesTableContent {
+          sections {
+            properties {
+              value
+            }
+          }
+        }
+        ... on ParagraphCollectionContent {
+          paragraphs {
+            ... on ParagraphContent {
+              body {
+                plainText
+              }
+            }
+          }
+        }
+        ... on ItemRelationsContent {
+          items {
+            name
+          }
+        }
+      }
+    }
+  }
+}

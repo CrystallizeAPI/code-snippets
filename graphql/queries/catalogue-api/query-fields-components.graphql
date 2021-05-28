@@ -1,0 +1,21 @@
+query {
+  catalogue(path: "/shop/chairs", language: "en") {
+    name
+    components {
+      name
+      type
+      content {
+        ... on ImageContent {
+          images {
+            ... on Image {
+              url
+            }
+          }
+        }
+        ... on RichTextContent {
+          html
+        }
+      }
+    }
+  }
+}

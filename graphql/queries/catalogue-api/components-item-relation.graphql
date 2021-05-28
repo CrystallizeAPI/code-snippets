@@ -1,0 +1,14 @@
+query {
+  catalogue(path: "/shop/sofas/arbour-eco", language: "en") {
+    component(id: "related-products") {
+      name
+      content {
+        ... on ItemRelationsContent {
+          items {
+            name
+          }
+        }
+      }
+    }
+  }
+}

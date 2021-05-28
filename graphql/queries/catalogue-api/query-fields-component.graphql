@@ -1,0 +1,13 @@
+query {
+  catalogue(path: "/shop/chairs", language: "en") {
+    name
+    component(id: "brief") {
+      name
+      content {
+        ... on RichTextContent {
+          plainText
+        }
+      }
+    }
+  }
+}

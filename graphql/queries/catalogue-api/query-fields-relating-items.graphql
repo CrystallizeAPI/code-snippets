@@ -1,0 +1,9 @@
+query {
+  catalogue(path: "/shop/chairs/funky-yellow-chair", language: "en") {
+    name
+    relatingItems {
+      name
+      type
+    }
+  }
+}

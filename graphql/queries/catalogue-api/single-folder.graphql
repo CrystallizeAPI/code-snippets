@@ -1,81 +1,8 @@
-query {
-  catalogue(language: "en", path: "/shop/chairs") {
-    ...item
-    ...folder
-  }
-}
-fragment item on Item {
-  id
-  name
-  type
-  path
-  components {
-    ...component
-  }
-}
-
-fragment folder on Folder {
-  children {
-    ...item
-    ...product
-  }
-}
-
-fragment product on Product {
-  variants {
-    stock
-    price
-    sku
-  }
-}
-
-fragment component on Component {
-  name
-  type
-  meta {
-    key
-    value
-  }
-  content {
-    ...singleLine
-    ...richText
-    ...imageContent
-    ...paragraphCollection
-  }
-}
-fragment image on Image {
-  url
-  altText
-  key
-  variants {
-    url
-    width
-    key
-  }
-}
-fragment imageContent on ImageContent {
-  images {
-    ...image
-  }
-}
-fragment singleLine on SingleLineContent {
-  text
-}
-fragment richText on RichTextContent {
-  json
-  html
-  plainText
-}
-fragment paragraphCollection on ParagraphCollectionContent {
-  paragraphs {
-    title {
-      ...singleLine
-    }
-    body {
-      ...richText
-    }
-    images {
-      ...image
-    }
+query GetFolder {
+  catalogue(language: "en", path: "/shop/plants") {
+		id
+		name
+    type
+    path
   }
 }

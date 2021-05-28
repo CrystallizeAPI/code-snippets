@@ -1,0 +1,26 @@
+query {
+  catalogue(
+    path: "/shop/plants/learn-demo-product"
+    language: "en"
+    version: draft
+  ) {
+    component(id: "chunk") {
+      name
+      content {
+        ... on ContentChunkContent {
+          chunks {
+            name
+            content {
+              ... on SingleLineContent {
+                text
+              }
+              ... on BooleanContent {
+                value
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

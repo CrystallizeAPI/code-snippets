@@ -1,0 +1,17 @@
+query {
+  catalogue(
+    path: "/shop/plants/learn-demo-product"
+    language: "en"
+    version: draft
+  ) {
+    component(id: "numeric-content") {
+      name
+      content {
+        ... on NumericContent {
+          number
+          unit
+        }
+      }
+    }
+  }
+}

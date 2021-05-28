@@ -1,17 +1,9 @@
 query HelloCrystallize{
-  catalogue(language: "en", path: "/shop/plants") {
-	  id
+  catalogue(language: "en", path: "/shop") {
     name
-    type
-    path
-    children{
-      id
+    children {
       name
       path
     }
-    topics{
-      name
-    }
   }
 }
-

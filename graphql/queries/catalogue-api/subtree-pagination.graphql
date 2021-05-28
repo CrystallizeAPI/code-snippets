@@ -1,0 +1,17 @@
+query {
+  catalogue(path: "/shop/plants", language: "en") {
+    subtree(first: 3, after: "eyJ0cmVlLnBvc2l0aW9uIjoyfQ==") {
+      edges {
+        node {
+          name
+        }
+        cursor
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+        totalNodes
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+query {
+  catalogue(path: "/web-frontpage", language: "en") {
+    component(id: "grids") {
+      name
+      content {
+        ... on GridRelationsContent {
+          grids {
+            ... on Grid {
+              name
+              rows {
+                columns {
+                  item {
+                    name
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

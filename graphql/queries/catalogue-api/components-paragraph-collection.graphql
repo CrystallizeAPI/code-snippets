@@ -1,0 +1,18 @@
+query {
+  catalogue(path: "/shop/plants/alocasia", language: "en") {
+    component(id: "description") {
+      name
+      content {
+        ... on ParagraphCollectionContent {
+          paragraphs {
+            ... on ParagraphContent {
+              body {
+                plainText
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

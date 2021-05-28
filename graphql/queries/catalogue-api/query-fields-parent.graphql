@@ -1,0 +1,9 @@
+query {
+  catalogue(path: "/shop/plants", language: "en") {
+    name
+    parent {
+      name
+      path
+    }
+  }
+}
