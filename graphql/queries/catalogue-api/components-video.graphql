@@ -1,0 +1,22 @@
+query {
+  catalogue(path: "/stories/color-is-back", language: "en") {
+    component(id: "video") {
+      name
+      content {
+        ... on VideoContent {
+          firstVideo {
+            ... on Video {
+              title
+              playlists
+              thumbnails {
+                ...on Image {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
