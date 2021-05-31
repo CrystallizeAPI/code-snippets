@@ -1,17 +1,13 @@
 query {
-  catalogue(path: "/stories/how-to-choose-the-right-rug", language: "en") {
-    component(id: "image") {
+  catalogue(path: "/stories/use-your-houseplants-as-decor", language: "en") {
+    name
+    component(id: "intro") {
       name
       content {
-        ... on ImageContent {
-          images {
-            ... on Image {
-              url
-              variants {
-                url
-              }
-            }
-          }
+        ... on RichTextContent {
+          plainText
+          html
+          json
         }
       }
     }
