@@ -2,19 +2,12 @@ query {
   search(
     language: "en"
     first: 3
-    after: "MQ="
     filter: { include: { paths: "/shop/plants" } }
   ) {
     edges {
       node {
         name
       }
-      cursor
-    }
-    pageInfo {
-      hasNextPage
-      endCursor
-      totalNodes
     }
   }
 }

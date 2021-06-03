@@ -1,0 +1,10 @@
+query {
+  search(language: "en", filter: { include: { paths: "/shop/plants" } }) {
+    edges {
+      node {
+        name
+        path
+      }
+    }
+  }
+}

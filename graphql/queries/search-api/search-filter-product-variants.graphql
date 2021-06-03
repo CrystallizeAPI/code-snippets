@@ -1,0 +1,16 @@
+query {
+  search(
+    language: "en"
+    filter: {
+      include: { paths: "/shop/sofas" }
+      productVariants: { isDefault: false }
+    }
+  ) {
+    edges {
+      node {
+        name
+        path
+      }
+    }
+  }
+}

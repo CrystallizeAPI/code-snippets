@@ -1,0 +1,10 @@
+query CatalogueSearch {
+  search(language: "en", filter: { searchTerm: "plant" }) {
+    edges {
+      node {
+        name
+        path
+      }
+    }
+  }
+}

@@ -1,20 +1,13 @@
 query {
   search(
     language: "en"
-    first: 3
-    after: "MQ="
     filter: { include: { paths: "/shop/plants" } }
+    orderBy: { field: ITEM_NAME, direction: ASC }
   ) {
     edges {
       node {
         name
       }
-      cursor
-    }
-    pageInfo {
-      hasNextPage
-      endCursor
-      totalNodes
     }
   }
 }

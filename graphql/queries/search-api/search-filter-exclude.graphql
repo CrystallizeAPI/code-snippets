@@ -1,0 +1,16 @@
+query {
+  search(
+    language: "en"
+    filter: {
+      include: { paths: "/shop/plants" }
+      exclude: { itemIds: "6012d47758e2650007786438" }
+    }
+  ) {
+    edges {
+      node {
+        name
+        path
+      }
+    }
+  }
+}

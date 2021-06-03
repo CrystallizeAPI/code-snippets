@@ -1,0 +1,10 @@
+query {
+  search(language: "en", orderBy: { field: ITEM_NAME, direction: ASC }) {
+    edges {
+      node {
+        name
+        path
+      }
+    }
+  }
+}

@@ -2,9 +2,8 @@ query {
   search(
     language: "en"
     filter: {
-      productVariants: {
-        attributes: [{ attribute: "Fabric", values: ["Black", "Blue"] }]
-      }
+      include: { paths: "/shop/plants" }
+      productVariants: { priceRange: { min: 10, max: 30 } }
     }
   ) {
     edges {
@@ -12,10 +11,7 @@ query {
         name
         ... on Product {
           variants {
-            attributes {
-              attribute
-              value
-            }
+            price
           }
         }
       }

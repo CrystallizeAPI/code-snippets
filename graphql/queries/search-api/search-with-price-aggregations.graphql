@@ -1,17 +1,14 @@
 query CatalogueSearch {
-  search(
-    first: 2
-    after: "MQ=="
-    filter: { type: PRODUCT, productVariants: { isDefault: true } }
-  ) {
-    pageInfo {
-      hasNextPage
-      endCursor
+  search(filter: { searchTerm: "table", type: PRODUCT }) {
+    aggregations {
+      price {
+        min
+        max
+      }
     }
     edges {
       node {
         name
-        id
         ... on Product {
           variants {
             price

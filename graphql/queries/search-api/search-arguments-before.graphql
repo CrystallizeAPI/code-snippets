@@ -1,0 +1,11 @@
+query {
+  search(language: "en", before: "Mg==") {
+    edges {
+      node {
+        name
+        path
+      }
+      cursor
+    }
+  }
+}

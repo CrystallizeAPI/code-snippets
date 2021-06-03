@@ -1,0 +1,10 @@
+query {
+  search(language: "en", first: 3) {
+    edges {
+      node {
+        name
+        path
+      }
+    }
+  }
+}

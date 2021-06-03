@@ -1,0 +1,21 @@
+query CatalogueSearch {
+  search(filter: { searchTerm: "sofa", type: PRODUCT }) {
+    aggregations {
+      topics {
+        hierarchy
+        name
+        count
+      }
+    }
+    edges {
+      node {
+        name
+        ... on Product {
+          variants {
+            name
+          }
+        }
+      }
+    }
+  }
+}

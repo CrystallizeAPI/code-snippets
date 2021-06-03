@@ -1,0 +1,10 @@
+query {
+  search(language: "en", filter: { type: DOCUMENT }) {
+    edges {
+      node {
+        name
+        path
+      }
+    }
+  }
+}

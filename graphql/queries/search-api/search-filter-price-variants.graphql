@@ -1,0 +1,17 @@
+query {
+  search(
+    language: "en"
+    filter: { include: { paths: "/shop/plants" }, priceVariant: "norway" }
+  ) {
+    edges {
+      node {
+        name
+        ... on Product {
+          variants {
+            price
+          }
+        }
+      }
+    }
+  }
+}
