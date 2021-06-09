@@ -1,0 +1,24 @@
+cart: [
+  {
+     name: "New variation"
+     sku: "red-headset-564274"
+     quantity: 1
+     price: {
+       currency: "EUR"
+       tax: { name: "No Tax", percent: 0 }
+       net: 89
+       gross: 89
+      }
+    },
+    {
+      name: "Adventurous"
+      sku: "adventurous-47872"
+      quantity: 1
+      price: {
+        currency: "EUR"
+        tax: { name: "No Tax", percent: 0 }
+        net: 29
+        gross: 29
+      }
+   }
+]

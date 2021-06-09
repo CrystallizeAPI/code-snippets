@@ -1,0 +1,12 @@
+total {
+	gross
+	net
+	currency
+	tax {
+	  name
+	  percent	
+	}
+	discounts {
+	  percent
+	}
+}

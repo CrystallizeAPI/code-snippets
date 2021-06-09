@@ -1,0 +1,13 @@
+query {
+  orders {
+    getAll(customerIdentifier: "cus_0001", first: 3) {
+      edges {
+        node {
+          cart {
+            name
+          }
+        }
+      }
+    }
+  }
+}

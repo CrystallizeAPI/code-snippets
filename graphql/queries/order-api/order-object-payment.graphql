@@ -1,0 +1,7 @@
+payment {
+   ... on StripePayment {
+     paymentMethod
+     orderId
+     customerId
+   }
+}

@@ -1,6 +1,8 @@
-{
-  provider:cash
-  cash:{
-    cash:"300"
-  }
-}
+payment: [
+ {
+	  provider:cash
+	  cash: {
+	    cash:"300"
+	  }
+	}
+]

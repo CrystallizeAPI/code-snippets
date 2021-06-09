@@ -1,0 +1,22 @@
+query {
+  orders {
+    getAll(
+      customerIdentifier: "cus_0001"
+      first: 2
+      after: "ADD_CURSOR_VALUE_HERE"
+    ) {
+      edges {
+        node {
+          cart {
+            name
+          }
+        }
+        cursor
+      }
+      pageInfo {
+        totalNodes
+        hasNextPage
+      }
+    }
+  }
+}

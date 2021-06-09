@@ -1,0 +1,18 @@
+query {
+  orders {
+    getAll(customerIdentifier: "cus_0001") {
+      edges {
+        node {
+          cart {
+            name
+          }
+        }
+        cursor
+      }
+      pageInfo {
+        totalNodes
+        hasNextPage
+      }
+    }
+  }
+}

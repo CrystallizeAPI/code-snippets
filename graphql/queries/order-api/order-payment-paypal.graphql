@@ -1,9 +1,11 @@
-{
-  provider: paypal
-  paypal:{
-    orderId: "ord_0001"
-    subscriptionId: "sub_001"
-    invoiceId: "inv_001"
-    metadata: ""
-  }
-}
+payment: [
+	{
+		provider: paypal
+    paypal: {
+      orderId: "ord_0001"
+      invoiceId: "inv_0001"
+      subscriptionId: "sub_0001"
+      metadata: null
+    }
+	}
+]

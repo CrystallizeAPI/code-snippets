@@ -26,14 +26,14 @@ mutation createOrder {
           ]
         }
         cart: {
-          name: "Kevin the Kiwi"
-          sku: "kevin-bowtie"
+          name: "Calathea"
+          sku: "maranta-leuconeura-1611849929203"
           quantity: 1
           price: {
-            currency: "USD"
+            currency: "EUR"
             tax: { name: "No Tax", percent: 0 }
-            net: 249
-            gross: 249
+            net: 23
+            gross: 23
           }
         }
         payment: [
@@ -48,8 +48,7 @@ mutation createOrder {
             }
           }
         ]
-        total: { gross: 249, currency: "USD" }
-        additionalInformation: ""
+        total: { gross: 23, currency: "EUR" }
       }
     ) {
       id

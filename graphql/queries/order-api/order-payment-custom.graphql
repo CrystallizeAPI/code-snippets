@@ -1,11 +1,13 @@
-{
-  provider: custom
-  custom: {
-    properties: [
-      { property: "order_id", value: "ord_0001" }
-      { property: "external_customer_id", value: "cus_0001" }
-      { property: "payment_method", value: "card" }
-      { property: "status", value: "CAPTURED" }
-    ]
-  }
-}
+payment: [
+ {
+	  provider: custom
+	  custom: {
+	    properties: [
+	      { property: "order_id", value: "ord_0001" }
+	      { property: "external_customer_id", value: "cus_0001" }
+	      { property: "payment_method", value: "card" }
+	      { property: "status", value: "CAPTURED" }
+	    ]
+	  }
+	}
+]
