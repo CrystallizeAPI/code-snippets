@@ -1,0 +1,12 @@
+{
+  orders {
+    get(id: "60bdbf1836f57a0008304051") {
+      customer {
+        firstName
+      }
+      cart {
+        name
+      }
+    }
+  }
+}
