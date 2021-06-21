@@ -1,10 +1,8 @@
 query GetDocument {
   catalogue(language: "en", path: "/stories/how-to-choose-the-right-rug") {
-    ... on Document {
-      name
-      type
-      path
-      publishedAt
-    }
+    name
+    type
+    path
+    publishedAt
   }
 }
