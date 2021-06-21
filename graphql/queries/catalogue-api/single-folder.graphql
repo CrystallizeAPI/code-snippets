@@ -1,8 +1,10 @@
 query GetFolder {
   catalogue(language: "en", path: "/shop/plants") {
-		id
-		name
-    type
-    path
+    ... on Folder {
+	id
+	name
+    	type
+    	path
+    }
   }
 }
