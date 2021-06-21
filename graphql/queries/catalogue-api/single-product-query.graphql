@@ -1,10 +1,8 @@
 query GetProduct {
   catalogue(language: "en", path: "/shop/plants/alocasia") {
-    ... on Product {
-      id
-      name
-      type
-      path
-    }
+    id
+    name
+    type
+    path
   }
 }
