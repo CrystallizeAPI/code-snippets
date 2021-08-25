@@ -10,7 +10,7 @@ query {
             { fields: { value: "/room/livingroom" } }
             {
               logicalOperator: OR
-              fields: [{ value: "/color/black" }, { value: "/color/brown" }]
+              fields: [{ value: "/color/black" }, { value: "/color/white" }]
             }
           ]
         }
