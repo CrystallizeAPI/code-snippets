@@ -1,4 +1,4 @@
-query CatalogueSearch {
+query {
   search(
     filter: {
       searchTerm: "table"
@@ -20,8 +20,8 @@ query CatalogueSearch {
   ) {
     edges {
       node {
-        name
         id
+        name
         ... on Product {
           matchingVariant {
             price
