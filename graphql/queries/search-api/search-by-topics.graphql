@@ -23,7 +23,7 @@ query CatalogueSearch {
         name
         id
         ... on Product {
-          variants {
+          matchingVariant {
             price
             name
           }
