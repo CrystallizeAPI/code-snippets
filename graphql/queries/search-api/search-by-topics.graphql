@@ -1,10 +1,20 @@
-
 query CatalogueSearch {
   search(
     filter: {
-      searchTerm: "Table"
+      searchTerm: "table"
       type: PRODUCT
-      include: { topicNames: ["Kitchen"] }
+      include: {
+        topicPaths: {
+          logicalOperator: AND
+          sections: [
+            { fields: { value: "/room/livingroom" } }
+            {
+              logicalOperator: OR
+              fields: [{ value: "/color/black" }, { value: "/color/brown" }]
+            }
+          ]
+        }
+      }
       productVariants: { isDefault: true }
     }
   ) {
