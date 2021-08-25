@@ -22,10 +22,13 @@ query {
       node {
         id
         name
+        topics {
+          name
+          path
+        }
         ... on Product {
           matchingVariant {
             price
-            name
           }
         }
       }
