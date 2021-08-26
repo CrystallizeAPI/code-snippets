@@ -3,15 +3,22 @@ query {
     language: "en"
     filter: {
       productVariants: {
-        attributes: [{ attribute: "Fabric", values: ["Black", "Blue"] }]
+        attributes: [{ attribute: "color", values: ["black", "blue"] }]
       }
     }
   ) {
+    aggregations {
+      variantAttributes {
+        attribute
+        value
+        count
+      }
+    }
     edges {
       node {
         name
         ... on Product {
-          variants {
+          matchingVariant {
             attributes {
               attribute
               value
