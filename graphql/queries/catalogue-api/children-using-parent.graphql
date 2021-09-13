@@ -1,5 +1,5 @@
 query {
-  catalogue(path: "/shop/sofas/blue-velour-sofa", language: "en") {
+  catalogue(path: "/shop/sofas", language: "en") {
     parent {
       name
       children {
