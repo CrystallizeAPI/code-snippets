@@ -2,8 +2,13 @@ query {
   catalogue(path: "/shop/sofas/arbour-eco", language: "en") {
     name
     ... on Product {
-      isVirtual
-      isSubscriptionOnly
+      variants {
+        stockLocations {
+          identifier
+          name
+          stock
+        }
+      }
     }
   }
 }

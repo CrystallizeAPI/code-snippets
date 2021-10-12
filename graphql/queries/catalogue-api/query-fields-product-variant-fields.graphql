@@ -5,7 +5,11 @@ query {
       variants {
         name
         price
-        stock
+        stockLocations{
+          identifier
+          name
+          stock
+        }
         attributes {
           attribute
           value
