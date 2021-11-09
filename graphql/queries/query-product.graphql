@@ -31,14 +31,16 @@ fragment product on Product {
     name
     percent
   }
-  isVirtual
-  isSubscriptionOnly
   variants {
     id
     name
     sku
     price
-    stock
+    stockLocations {
+      identifier
+      name
+      stock
+    }
     isDefault
     image {
       ...image

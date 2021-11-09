@@ -23,7 +23,11 @@ fragment folder on Folder {
 
 fragment product on Product {
   variants {
-    stock
+    stockLocations {
+      identifier
+      name
+      stock
+    }
     price
     sku
   }

@@ -5,7 +5,11 @@ query {
       defaultVariant {
         name
         sku
-        stock
+        stockLocations {
+          identifier
+          name
+          stock
+        }
         priceVariants {
           identifier
           name

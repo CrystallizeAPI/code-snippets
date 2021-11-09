@@ -6,7 +6,11 @@ query {
           id
           sku
           name
-          stock
+          stockLocations {
+            identifier
+            name
+            stock
+          }
           price
           isDefault
           images {
