@@ -1,0 +1,17 @@
+{
+  plants: catalogue(language: "en", path: "/shop/plants") {
+    products: children {
+      name
+      url: path
+      ... on Product {
+        defaultVariant {
+          price
+          stock
+          firstImage {
+            url
+          }
+        }
+      }
+    }
+  }
+}
