@@ -1,0 +1,19 @@
+{
+  plants: catalogue(language: "en", path: "/shop/sofas/arbour-eco") {
+    name
+    url: path
+    ... on Product {
+      defaultVariant {
+        priceVariants{
+          name
+          price
+          currency
+        }
+        stockLocations{
+          name
+          stock
+        }
+      }
+    }    
+  }
+}
