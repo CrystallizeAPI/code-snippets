@@ -1,0 +1,22 @@
+{
+  plants: catalogue(language: "en", path: "/shop/plants/monstera-deliciosa") {
+    name
+    url: path
+    ... on Product {
+      defaultVariant {
+        price
+        stock
+        firstImage {
+          url
+        }
+      }
+    }
+    component(id: "summary") {
+      content {
+        ... on RichTextContent {
+          plainText
+        }
+      }
+    }
+  }
+}
