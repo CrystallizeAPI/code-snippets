@@ -1,0 +1,30 @@
+{
+  plants: catalogue(language: "en", path: "/shop/sofas/arbour-eco") {
+    name
+    url: path
+    summary: component(id: "summary") {
+      content {
+        ... on RichTextContent {
+          plainText
+        }
+      }
+    }
+    description: component(id: "description") {
+      content {
+        ... on ParagraphCollectionContent {
+          paragraphs{
+            title{
+              text
+            }
+            body{
+              json
+            }
+            images{
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
