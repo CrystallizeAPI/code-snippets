@@ -1,4 +1,4 @@
-{
+query {
   plants: catalogue(language: "en", path: "/shop/plants/monstera-deliciosa") {
     name
     url: path
