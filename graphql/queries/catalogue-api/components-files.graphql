@@ -1,0 +1,17 @@
+query {
+  catalogue(path: "/shop/sofas/arbour-eco", language: "en") {
+    component(id: "manual") {
+      name
+      content {
+        ... on FileContent {
+          files {
+            url
+            key
+            title
+            size
+          }
+        }
+      }
+    }
+  }
+}
