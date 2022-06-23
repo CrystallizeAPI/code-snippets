@@ -48,7 +48,7 @@ mutation createOrder {
             }
           }
         ]
-        total: { gross: 23, currency: "EUR" }
+        total: { gross: 23, net: 23, currency: "EUR" }
       }
     ) {
       id
