@@ -10,6 +10,10 @@ query {
               variants {
                 url
               }
+              meta {
+                key
+                value
+              }
             }
           }
         }
