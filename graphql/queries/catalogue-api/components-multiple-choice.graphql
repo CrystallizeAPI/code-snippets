@@ -1,0 +1,31 @@
+{
+  catalogue(path: "/stories/art-deco-design", language: "en") {
+    component(id: "flexible-content") {
+      name
+      content {
+        ... on ComponentMultipleChoiceContent {
+          selectedComponents {
+            name
+            type
+            content {
+              ... on ImageContent {
+                images {
+                  ... on Image {
+                    url
+                    variants {
+                      url
+                    }
+                    meta {
+                      key
+                      value
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
