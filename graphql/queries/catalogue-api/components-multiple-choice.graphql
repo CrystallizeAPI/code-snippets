@@ -1,4 +1,4 @@
-{
+query {
   catalogue(path: "/stories/art-deco-design", language: "en") {
     component(id: "flexible-content") {
       name
