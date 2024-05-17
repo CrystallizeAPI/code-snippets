@@ -1,0 +1,15 @@
+{
+  catalogue(path: "/shop/sofas/mod-sofa", language: "en") {
+    component(id: "options") {
+      name
+      content {
+        ... on SelectionContent {
+          options {
+            key
+            value
+          }
+        }
+      }
+    }
+  }
+}
