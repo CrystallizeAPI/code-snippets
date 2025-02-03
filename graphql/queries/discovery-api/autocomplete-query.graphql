@@ -1,0 +1,13 @@
+query Autocomplete{ 
+autocomplete(
+    term: "Pal"
+  )
+  {
+    summary{
+      totalHits
+    }
+    hits{
+      name      
+    }
+  }
+}
