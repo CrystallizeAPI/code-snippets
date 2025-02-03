@@ -1,0 +1,15 @@
+query GetProductsPaginated{
+  browse {
+    product(
+      path: "/products/outdoor-furniture/*",
+      pagination: { limit: 5, skip:2 }
+    ) {
+      hits {
+        name
+        defaultVariant{
+          defaultPrice
+        }
+      }
+    }
+  }
+}
