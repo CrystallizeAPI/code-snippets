@@ -3,7 +3,7 @@ browse {
     product(
       path: "/products/outdoor-furniture/*",
       sorting: { price_default:asc },
-			facets: {
+	  facets: {
         topics: { key: "topics", limit: 5},
         brand_items_name: { key: "brand", limit: 5 }
       }
@@ -20,7 +20,7 @@ browse {
           weightUnit
         }
         variants{
- 					price:defaultPrice
+ 		  price:defaultPrice
           firstImage{
             variants(types:["avif"], maxWidth: 300){
               url

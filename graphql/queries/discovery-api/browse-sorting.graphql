@@ -1,0 +1,22 @@
+query GetProductsSorted{
+  browse {
+    product(
+      path: "/products/outdoor-furniture/*",
+      sorting: { 
+        price_default: desc,
+        dimensions_weight_number: asc },
+    ) {
+      hits {
+        name
+        description(format:plainText)
+        defaultVariant{
+          defaultPrice
+        }        
+        dimensions {
+          weight
+          weightUnit
+        }
+      }
+    }
+  }
+}
