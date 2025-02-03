@@ -1,0 +1,39 @@
+query GetProductsFaceted{
+browse {
+    product(
+      path: "/products/outdoor-furniture/*",
+      sorting: { price_default:asc },
+			facets: {
+        topics: { key: "topics", limit: 5},
+        brand_items_name: { key: "brand", limit: 5 }
+      }
+    ) {
+      summary{
+        totalHits
+        facets
+      }
+      hits {
+        name
+        description(format:plainText)
+        dimensions {
+          weight
+          weightUnit
+        }
+        variants{
+ 					price:defaultPrice
+          firstImage{
+            variants(types:["avif"], maxWidth: 300){
+              url
+            }
+          }
+        }
+        relatedProducts{
+          variants{
+            name
+ 			price:defaultPrice
+          }
+        }
+      }
+    }
+  }
+}
