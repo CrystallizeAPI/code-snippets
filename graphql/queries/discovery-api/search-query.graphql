@@ -1,0 +1,23 @@
+query SearchQuery {
+search(
+    term: "chair"
+    options: {fuzzy: {fuzziness: DOUBLE}}) {
+    hits {
+      shape
+      ... on product {
+        name
+        description(format: plainText)
+        dimensions {
+          weight
+          weightUnit
+        }
+      }
+      ... on story {
+        	name
+      }
+      ... on category {
+        	name
+      }
+    }
+  }
+}
