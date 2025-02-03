@@ -1,0 +1,19 @@
+query BrowseQuery {
+browse{
+    product(
+      path: "/products/outdoor-furniture/*"
+    )
+    {
+      hits{
+        name
+        title
+        description
+        topics
+        variants{
+          name
+          defaultPrice          
+        }
+      }
+    }
+  }  	
+}
