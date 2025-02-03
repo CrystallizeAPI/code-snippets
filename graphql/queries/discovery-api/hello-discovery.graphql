@@ -1,0 +1,13 @@
+query GetProducts{ 
+	browse{
+    product
+    {
+      hits{
+        name
+        title
+        description
+        topics
+      }
+    }
+  }  	
+}
