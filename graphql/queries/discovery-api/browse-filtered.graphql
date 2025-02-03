@@ -1,0 +1,26 @@
+query GetProductsFiltered{ 
+browse{
+    product(
+      path: "/products/outdoor-furniture/*"
+      filters: {
+        AND: {
+      		price_default: { range: { gt: 500 } },
+        	dimensions_weight_number: { range: { lt: 20 } }
+        }
+      }
+    )
+    {
+      hits{
+        name
+        dimensions{
+          weight
+        }
+        variants{
+        	name
+          defaultPrice
+          
+        }
+      }
+    }
+  }  	
+}
