@@ -1,5 +1,5 @@
 query GetProducts{ 
-	browse{
+browse{
     product
     {
       hits{
