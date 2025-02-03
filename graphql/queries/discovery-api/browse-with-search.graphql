@@ -1,0 +1,18 @@
+query GetProducts{ 
+browse{
+    product(
+      term: "chair",
+      options: {fuzzy: {fuzziness: DOUBLE} } 
+    ){
+      hits{
+        name
+        title
+        description
+        variants{
+           name
+           defaultPrice
+        }
+      }
+    }
+  }  	
+}
