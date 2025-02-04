@@ -1,0 +1,23 @@
+query SearchProducts {
+search(
+    term: "green", 
+    options: {fuzzy: {fuzziness: DOUBLE}}) {
+    hits {
+      shape
+      ... on product {
+        name
+        defaultVariant{
+          name
+          defaultPrice
+        }
+      }
+      ... on category {
+        	name
+      }
+      ... on story {
+        	name
+      }
+      
+    }
+  }
+}
