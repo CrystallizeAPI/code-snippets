@@ -1,0 +1,18 @@
+query GetProducts {
+  browse {
+    product(
+      pagination: { limit: 25, after: "" }
+      sorting: { score: desc, itemId: desc }
+    ) {
+      summary {
+        endToken #can be used for fetching the next page with 'after' parameter
+      }
+      hits {
+        name
+        title
+        description
+        topics
+      }
+    }
+  }
+}
